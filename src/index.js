@@ -4,13 +4,15 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { CartContextProvider } from './contexts/CartContext'
-
+import { ThemeContextProvider } from './contexts/ThemeContext'
 ReactDOM.render(
-  <CartContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </CartContextProvider>,
+  <React.StrictMode>
+    <CartContextProvider>
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
+    </CartContextProvider>
+  </React.StrictMode>,
   document.getElementById('root'),
 )
 

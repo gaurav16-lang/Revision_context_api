@@ -5,7 +5,7 @@ export const Cart = () => {
   const value = useContext(CartContext)
   return (
     <>
-      <h1>Cart items {value}</h1>
+      <h1>Cart items {value.cart}</h1>
     </>
   )
 }
